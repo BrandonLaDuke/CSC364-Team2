@@ -1,0 +1,54 @@
+body {
+  display: grid;
+  margin: 0;
+  background: black;
+  color: #fff;
+}
+.menu {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  margin: 0;
+  padding: 10px;
+}
+.menu > a {
+  text-decoration: none;
+}
+.menu > a > li {
+  display: block;
+  width: auto;
+  margin: 10px;
+  --aug-border: 5px;
+  --aug-inset: 5px;
+  padding: 20px; /* mind the gap */
+  text-align: center;
+  font-size: 25px;
+  --aug-border-bg: gold;
+  --aug-inset-bg: gold;
+  --aug-width:10px;
+  color: #000;
+  transition: ease all 500ms
+}
+
+@media (min-width:800px) {
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .menu > a > li {
+    width: auto;
+    margin: 10px;
+    --aug-border: 5px;
+    --aug-inset: 5px;
+    padding: 20px; /* mind the gap */
+    text-align: center;
+    font-size: 25px;
+    --aug-border-bg: gold;
+    --aug-inset-bg: gold;
+    color: #000;
+    transition: ease all 500ms
+  }
+}
+.menu > a > li:hover {
+  --aug-br-height: 50%;
+}

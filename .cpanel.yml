@@ -1,5 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/dladuke1/public_html/sullivan/csc364
-    - /bin/cp -R app $DEPLOYPATH
