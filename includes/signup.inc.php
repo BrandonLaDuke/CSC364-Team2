@@ -1,4 +1,6 @@
 <?php
+// ini_set('display_errors', 'On');
+// error_reporting(E_ALL);
 if (isset($_POST['signup-submit'])) {
   require 'dbh.inc.php';
 
@@ -48,7 +50,7 @@ if (isset($_POST['signup-submit'])) {
           header("Location: ../signup.php?error=sqlerror");
           exit();
         } else {
-          $hashedPwd = pasword_hash($password, PASSWORD_DEFAULT);
+          $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
           mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedPwd);
           mysqli_stmt_execute($stmt);
           header("Location: ../signup.php?signup=success");
@@ -56,8 +58,8 @@ if (isset($_POST['signup-submit'])) {
       }
     }
   }
-  // mysqli_stmt_close($stmt);
-  // mysqli_close($conn);
+  mysqli_stmt_close($stmt);
+  mysqli_close($conn);
 } else {
   header("Location: ../signup.php");
   exit();
