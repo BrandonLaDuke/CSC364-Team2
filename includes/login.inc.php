@@ -35,7 +35,8 @@ if (isset($_POST['login-submit'])) {
           $_SESSION['userUid'] = $row['uidUsers'];
           //Add email later probbly
 
-          header("Location: ../index.php?login=success")
+          header("Location: ../index.php?login=success");
+          exit();
         } else {
           header("Location: ../index.php?error=wrongpwd");
           exit();
