@@ -35,8 +35,11 @@ body {
   --aug-inset: 5px;
   --aug-tr-height: 0px;
 }
+main {
+  margin: 0 20px 20px 20px;
+}
 #logo {
-  font-size: 60px;
+  font-size: 40px;
   font-family: Retro_Gaming;
   margin: 10px 0 0 20px;
   background-image: linear-gradient(
@@ -57,6 +60,45 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.header-login {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  margin: 10px;
+  height: 45px;
+}
+.logout, .signin > input {
+  --aug-border-bg: #000;
+  --aug-inset-bg: #000;
+  --aug-width:10px;
+  --aug-border: 5px;
+  --aug-inset: 5px;
+  --aug-tr-height: 0px;
+}
+.signin > input {
+  font-size: 15px;
+  padding: 3px;
+}
+.signin > button {
+  font-size: 15px;
+  padding: 5px 10px;
+}
+.header-signup, .signin {
+  display: inline-block;
+}
+.header-signup {
+  --aug-border-bg: blue;
+  --aug-inset-bg: #000;
+  --aug-width:10px;
+  --aug-border: 2px;
+  --aug-inset: 5px;
+  --aug-tr-height: 0px;
+  padding: 12px;
+  color: #fff;
+  text-decoration: none;
+}
 .menu {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -75,7 +117,7 @@ body {
   --aug-inset: 5px;
   padding: 20px; /* mind the gap */
   text-align: center;
-  font-size: 25px;
+  font-size: 16px;
   font-family: Retro_Gaming;
   --aug-border-bg: gold;
   --aug-inset-bg: gold;
@@ -96,8 +138,8 @@ body {
     --aug-width:10px;
     --aug-border: 5px;
     --aug-inset: 5px;
-    --aug-tr-width: calc(100vw - 700px);
-    --aug-tr-height: 70px;
+    --aug-tr-width: calc(100vw - 480px);
+    --aug-tr-height: 50px;
   }
 
 }
