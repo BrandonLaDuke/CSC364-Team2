@@ -8,6 +8,7 @@ if (isset($_POST['signup-submit'])) {
   $email = $_POST['mail'];
   $password = $_POST['pwd'];
   $passwordRepeat = $_POST['pwd-repeat'];
+  $admin = 0;
 
   if (empty($username) || empty($email) || empty($password) || empty($passwordRepeat)) {
     header("Location: ../signup.php?error=emptyfields&uid=".$username."&mail=".$email);
@@ -44,14 +45,14 @@ if (isset($_POST['signup-submit'])) {
         header("Location: ../signup.php?error=usertaken&mail=".$email);
         exit();
       } else {
-        $sql = "INSERT INTO users (uidUsers, emailUsers, pwdUsers) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO users (uidUsers, emailUsers, pwdUsers, admin) VALUES (?, ?, ?, ?)";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
           header("Location: ../signup.php?error=sqlerror");
           exit();
         } else {
           $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
-          mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedPwd);
+          mysqli_stmt_bind_param($stmt, "ssss", $username, $email, $hashedPwd, $admin);
           mysqli_stmt_execute($stmt);
           header("Location: ../signup.php?signup=success");
         }
