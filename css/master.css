@@ -187,8 +187,15 @@ main {
   display: grid;
   grid-template-columns: 250px auto;
   grid-template-rows: auto;
-  grid-template-areas: "cp-nav overview"
-                       "cp-nav games";
+  grid-template-areas: "cp-nav games"
+                       "cp-nav users";
+  color: #fff;
+}
+.control-panel-eg {
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-template-rows: auto;
+  grid-template-areas: "cp-nav edit";
   color: #fff;
 }
 .cp-nav > ul > li > a {
@@ -215,10 +222,29 @@ main {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.cp-ga-overview {
+.cp-ga-users {
   grid-area: overview;
 }
 .cp-ga-games {
   grid-area: games;
+}
+.cp-edit {
+  grid-area: edit;
+}
+.cp-edit > .edit-game > input,
+.cp-edit > .edit-game > .rating > div {
+  display: block;
+}
+.cp-edit > .edit-game > label {
+  font-size: 15px;
+  margin-top: 15px;
+  display: block;
+}
+#gametitle {
+  width: 80%;
+  font-size: 20px;
+}
+#publisher {
+  width: 500px;
 }
 /* admins end */

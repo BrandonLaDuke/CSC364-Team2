@@ -20,14 +20,18 @@ session_start(); ?>
           <form class="logout" action="includes/logout.inc.php" method="post">
               <button type="submit" augmented-ui="br-clip exe" name="logout-submit">Logout</button>
           </form>
-  <?php } else {
-        echo '<form class="signin" action="includes/login.inc.php" method="post">
+  <?php } else { ?>
+  <?php
+  // TODO: Echo Errors 
+     ?>
+        <!-- <p class="welcome-msg"> echo $_SESSION['userUid']; </p> -->
+        <form class="signin" action="includes/login.inc.php" method="post">
             <input type="text" name="mailuid" placeholder="Email/Username" augmented-ui="br-clip exe">
             <input type="password" name="pwd" placeholder="Password" augmented-ui="br-clip exe">
             <button type="submit" name="login-submit" augmented-ui="br-clip exe">Login</button>
         </form>
-        <a href="signup.php" class="header-signup" augmented-ui="br-clip exe">Sign Up</a>';
-      } ?>
+        <a href="signup.php" class="header-signup" augmented-ui="br-clip exe">Sign Up</a>
+ <?php  } ?>
 
 
     </div>

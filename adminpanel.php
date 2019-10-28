@@ -12,11 +12,17 @@
           <li><a href="adminpanel-edit-platforms.php">Edit Platforms</a></li>
         </ul>
       </div>
-      <div class="cp-ga-overview">
 
-      </div>
       <div class="cp-ga-games">
+        <table>
+          <!-- Get list of games -->
+        </table>
+      </div>
 
+      <div class="cp-ga-users">
+        <table>
+          <!-- Get list of users -->
+        </table>
       </div>
     </section>
 
