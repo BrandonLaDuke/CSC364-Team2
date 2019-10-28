@@ -69,36 +69,63 @@ main {
   margin: 10px;
   height: 45px;
 }
-.logout, .signin > input {
+.signin > input {
   --aug-border-bg: #000;
   --aug-inset-bg: #000;
   --aug-width:10px;
   --aug-border: 5px;
   --aug-inset: 5px;
   --aug-tr-height: 0px;
+  background: #000;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px;
 }
 .signin > input {
   font-size: 15px;
-  padding: 3px;
+  padding: 10px;
+  width: 200px;
 }
-.signin > button {
+.signin > button, .logout > button {
   font-size: 15px;
-  padding: 5px 10px;
-}
-.header-signup, .signin {
-  display: inline-block;
-}
-.header-signup {
-  --aug-border-bg: blue;
+  padding: 12px 20px;
+  --aug-border-bg: gold;
   --aug-inset-bg: #000;
   --aug-width:10px;
   --aug-border: 2px;
-  --aug-inset: 5px;
+  --aug-tr-height: 0px;
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+.header-signup, .cp-btn {
+  --aug-border-bg: gold;
+  --aug-inset-bg: #000;
+  --aug-width:10px;
+  --aug-border: 2px;
   --aug-tr-height: 0px;
   padding: 12px;
   color: #fff;
   text-decoration: none;
+  margin-left: 10px;
+  display: inline-block;
 }
+.cp-btn {
+  --aug-inset-bg: #5f0000;
+}
+.cp-btn:hover {
+  --aug-inset-bg: #ff0000;
+}
+.signin, .header-login > form {
+  display: inline-block;
+}
+.welcome-msg {
+  display: none;
+}
+
+
 .menu {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -146,3 +173,78 @@ main {
 .menu > a > li:hover {
   --aug-br-height: 50%;
 }
+@media (min-width:1000px) {
+  .welcome-msg {
+    display: inline-block;
+    font-size: 15px;
+    font-family: sans-serif;
+    margin-right: 10px;
+  }
+}
+
+/* admins only */
+.control-panel {
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-template-rows: auto;
+  grid-template-areas: "cp-nav games"
+                       "cp-nav users";
+  color: #fff;
+}
+.control-panel-eg {
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-template-rows: auto;
+  grid-template-areas: "cp-nav edit";
+  color: #fff;
+}
+.cp-nav > ul > li > a {
+  color: #fff;
+  text-decoration: none;
+  font-family: Retro_Gaming;
+}
+.cp-nav > ul > li > a:hover {
+  background-image: linear-gradient(
+    #5444aa 0%,
+    #3487de 15%,
+    #45eebb 15%,
+    #45eebb 30%,
+    #feff33 30%,
+    #feff33 44%,
+    #ffdd55 44%,
+    #ffdd55 58%,
+    #dd7611 58%,
+    #dd7611 70%,
+    #993411 70%,
+    #993411 100%);
+  background-position: center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.cp-ga-users {
+  grid-area: overview;
+}
+.cp-ga-games {
+  grid-area: games;
+}
+.cp-edit {
+  grid-area: edit;
+}
+.cp-edit > .edit-game > input,
+.cp-edit > .edit-game > .rating > div {
+  display: block;
+}
+.cp-edit > .edit-game > label {
+  font-size: 15px;
+  margin-top: 15px;
+  display: block;
+}
+#gametitle {
+  width: 80%;
+  font-size: 20px;
+}
+#publisher {
+  width: 500px;
+}
+/* admins end */
