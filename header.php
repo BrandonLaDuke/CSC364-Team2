@@ -12,18 +12,26 @@ session_start(); ?>
   </head>
   <body>
     <div class="header-login" augmented-ui="br-clip exe">
-      <?php if (isset($_SESSION['userId'])) {
-        echo '<form class="logout" action="includes/logout.inc.php" method="post">
-            <button type="submit" augmented-ui="br-clip exe" name="logout-submit">Logout</button>
-        </form>';
-      } else {
-        echo '<form class="signin" action="includes/login.inc.php" method="post">
+      <?php if (isset($_SESSION['userId'])) { ?>
+        <p class="welcome-msg">Welcome, <?php echo $_SESSION['userUid']; ?>!</p>
+  <?php if ($_SESSION['admin']) { ?>
+          <a class="cp-btn" augmented-ui="br-clip exe" href="adminpanel.php">Control Panel</a>
+  <?php } ?>
+          <form class="logout" action="includes/logout.inc.php" method="post">
+              <button type="submit" augmented-ui="br-clip exe" name="logout-submit">Logout</button>
+          </form>
+  <?php } else { ?>
+  <?php
+  // TODO: Echo Errors
+     ?>
+        <!-- <p class="welcome-msg"> echo $_SESSION['userUid']; </p> -->
+        <form class="signin" action="includes/login.inc.php" method="post">
             <input type="text" name="mailuid" placeholder="Email/Username" augmented-ui="br-clip exe">
             <input type="password" name="pwd" placeholder="Password" augmented-ui="br-clip exe">
             <button type="submit" name="login-submit" augmented-ui="br-clip exe">Login</button>
         </form>
-        <a href="signup.php" class="header-signup" augmented-ui="br-clip exe">Sign Up</a>';
-      } ?>
+        <a href="signup.php" class="header-signup" augmented-ui="br-clip exe">Sign Up</a>
+ <?php  } ?>
 
 
     </div>
@@ -31,9 +39,9 @@ session_start(); ?>
 
         <h1 id="logo">Retro Game Store</h1>
         <ul class="menu" augmented-ui="tl-clip br-clip exe">
-          <a href="#"><li augmented-ui="tl-clip br-clip exe">Home</li></a>
-          <a href="#"><li augmented-ui="tl-clip br-clip exe">Buy</li></a>
-          <a href="#"><li augmented-ui="tl-clip br-clip exe">Sell</li></a>
-          <a href="#"><li augmented-ui="tl-clip br-clip exe">FAQ</li></a>
-          <a href="#"><li augmented-ui="tl-clip br-clip exe">Contact Us</li></a>
+          <a href="index.php"><li augmented-ui="tl-clip br-clip exe">Home</li></a>
+          <a href="buy.php"><li augmented-ui="tl-clip br-clip exe">Buy</li></a>
+          <a href="sell.php"><li augmented-ui="tl-clip br-clip exe">Sell</li></a>
+          <a href="faq.php"><li augmented-ui="tl-clip br-clip exe">FAQ</li></a>
+          <a href="contact.php"><li augmented-ui="tl-clip br-clip exe">Contact Us</li></a>
         </ul>
