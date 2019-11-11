@@ -3,9 +3,14 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/dladuke1/public_html/sullivan/csc364/
     - /bin/cp -R index.php $DEPLOYPATH
+    - /bin/cp -R adminpanel.php $DEPLOYPATH
+    - /bin/cp -R adminpanel-edit-games.php $DEPLOYPATH
+    - /bin/cp -R adminpanel-edit-platforms.php $DEPLOYPATH
     - /bin/cp -R header.php $DEPLOYPATH
     - /bin/cp -R footer.php $DEPLOYPATH
+    - /bin/cp -R signup.php $DEPLOYPATH
     - /bin/cp -R css $DEPLOYPATH
     - /bin/cp -R js $DEPLOYPATH
     - /bin/cp -R fonts $DEPLOYPATH
     - /bin/cp -R includes $DEPLOYPATH
+    - /bin/cp -R uploads $DEPLOYPATH
