@@ -13,7 +13,7 @@ session_start(); ?>
   <body>
     <div class="header-login" augmented-ui="br-clip exe">
       <?php if (isset($_SESSION['userId'])) { ?>
-        <p class="welcome-msg">Welcome, <?php echo $_SESSION['userUid']; ?>!</p>
+        <p class="welcome-msg">Welcome, <?php echo $_SESSION['userUid']; ?>! &nbsp; Wallet Ballance: $<?php echo $_SESSION['wallet']; ?></p>
   <?php if ($_SESSION['admin']) { ?>
           <a class="cp-btn" augmented-ui="br-clip exe" href="adminpanel.php">Control Panel</a>
   <?php } ?>
