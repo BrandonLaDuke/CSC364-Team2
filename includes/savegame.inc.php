@@ -42,8 +42,8 @@ if (isset($_POST['save-game-submit'])) {
             $fileNameNew = uniqid('', true).".".$coverartActualExt;
             $fileDestination = '../uploads/'.$fileNameNew;
             move_uploaded_file($coverartTmpName, $fileDestination);
-            // $coverArtUrl = 'http://sullivan.brandonladuke.com/CSC364-Team2/uploads/'.$fileNameNew;
-            $coverArtUrl = 'http://localhost/sullivan/csc364-Team2/uploads/'.$fileNameNew;
+            $coverArtUrl = 'http://sullivan.brandonladuke.com/csc364/uploads/'.$fileNameNew;
+            // $coverArtUrl = 'http://localhost/sullivan/csc364-Team2/uploads/'.$fileNameNew;
           } else {
             echo "Wow! Your file is too big!";
           }
