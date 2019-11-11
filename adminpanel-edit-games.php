@@ -21,7 +21,7 @@
           <input id="publisher" type="text" name="publisher" placeholder="e.g. Nintendo of America" value="">
           <p>Platforms:</p>
           <div class="platforms">
-            
+
             <div>
               <input type="radio" id="playstation" name="platform" value="PlayStation">
               <label for="playstation">PlayStation</label>
@@ -72,9 +72,12 @@
               <label for="rp">Rating Pending</label>
             </div>
           </div>
-          <input type="text" name="price" placeholder="e.g. 29.99" value="">
-          <input type="text" name="inventory" placeholder="e.g. 5" value="">
-          <textarea name="details" placeholder="Provide details like the description or any other info." rows="8" cols="80"></textarea>
+          <label for="price">Price: </label>
+          <input id="price" type="text" name="price" placeholder="e.g. 29.99" value="">
+          <label for="inventory">Inventory: </label>
+          <input id="inventory" type="text" name="inventory" placeholder="e.g. 5" value="">
+          <label for="details">Description/Information: </label>
+          <textarea id="details" name="details" placeholder="Provide details like the description or any other info." rows="8" cols="80"></textarea>
           <br>
           <button type="submit" name="save-game-submit">Save</button>
         </form>
