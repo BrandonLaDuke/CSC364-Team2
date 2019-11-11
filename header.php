@@ -22,7 +22,7 @@ session_start(); ?>
           </form>
   <?php } else { ?>
   <?php
-  // TODO: Echo Errors 
+  // TODO: Echo Errors
      ?>
         <!-- <p class="welcome-msg"> echo $_SESSION['userUid']; </p> -->
         <form class="signin" action="includes/login.inc.php" method="post">
