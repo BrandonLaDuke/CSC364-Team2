@@ -14,24 +14,27 @@
       </div>
 
       <div class="cp-edit">
-        <form class="edit-game" action="savegame.inc.php" method="post">
+        <form class="edit-game" action="includes/savegame.inc.php" method="post" enctype="multipart/form-data">
           <label for="gametitle">Game Title</label>
           <input id="gametitle" type="text" name="gametitle" placeholder="e.g. Pokemon: Red Version" value="">
           <label for="publisher">Publisher</label>
           <input id="publisher" type="text" name="publisher" placeholder="e.g. Nintendo of America" value="">
           <p>Platforms:</p>
           <div class="platforms">
+
             <div>
-              <input type="checkbox" id="playstation" name="platform">
+              <input type="radio" id="playstation" name="platform" value="PlayStation">
               <label for="playstation">PlayStation</label>
             </div>
 
             <div>
-              <input type="checkbox" id="ngc" name="platform">
+              <input type="radio" id="ngc" name="platform" value="GameCube">
               <label for="ngc">GameCube</label>
             </div>
           </div>
+
           <input type="file" name="coverart" value="">
+
           <p>Select a rating:</p>
           <div class="rating">
             <div>
@@ -69,9 +72,12 @@
               <label for="rp">Rating Pending</label>
             </div>
           </div>
-          <input type="text" name="price" placeholder="e.g. 29.99" value="">
-          <input type="text" name="inventory" placeholder="e.g. 5" value="">
-          <textarea name="details" placeholder="Provide details like the description or any other info." rows="8" cols="80"></textarea>
+          <label for="price">Price: </label>
+          <input id="price" type="text" name="price" placeholder="e.g. 29.99" value="">
+          <label for="inventory">Inventory: </label>
+          <input id="inventory" type="text" name="inventory" placeholder="e.g. 5" value="">
+          <label for="details">Description/Information: </label>
+          <textarea id="details" name="details" placeholder="Provide details like the description or any other info." rows="8" cols="80"></textarea>
           <br>
           <button type="submit" name="save-game-submit">Save</button>
         </form>
