@@ -33,8 +33,8 @@ if (isset($_POST['login-submit'])) {
           session_start();
           $_SESSION['userId'] = $row['idUsers'];
           $_SESSION['userUid'] = $row['uidUsers'];
+          $_SESSION['wallet'] = $row['wallet'];
           $_SESSION['admin'] = $row['admin'];
-          //Add email later probbly
 
           header("Location: ../index.php?login=success");
           exit();
