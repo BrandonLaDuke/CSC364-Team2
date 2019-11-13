@@ -152,7 +152,14 @@ main {
   color: #000;
   transition: ease all 500ms
 }
-
+@media (max-width:799px) {
+  .wrapper {
+    margin-top: 60px;
+  }
+  .welcome-msg {
+    display: inline-block;
+  }
+}
 @media (min-width:800px) {
   .menu {
     display: grid;
@@ -187,8 +194,7 @@ main {
   display: grid;
   grid-template-columns: 250px auto;
   grid-template-rows: auto;
-  grid-template-areas: "cp-nav games"
-                       "cp-nav users";
+  grid-template-areas: "cp-nav info";
   color: #fff;
 }
 .control-panel-eg {
@@ -222,15 +228,23 @@ main {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.cp-ga-users {
-  grid-area: overview;
+.cp-ga-info {
+  grid-area: info;
 }
-.cp-ga-games {
-  grid-area: games;
+tr:nth-child(2n+1){
+  background: #222;
 }
+tr td {
+  padding: 3px 20px;
+}
+
+
+
 .cp-edit {
   grid-area: edit;
 }
+
+
 .cp-edit > .edit-game > input,
 .cp-edit > .edit-game > .rating > div {
   display: block;
@@ -248,3 +262,37 @@ main {
   width: 500px;
 }
 /* admins end */
+
+/* footer begin */
+footer {
+  padding: 15px 25px;
+  font-family: 'Retro_Gaming';
+  font-size: 14px;
+}
+#codel {
+  font-size: 16px;
+  background-image: linear-gradient(
+    #5444aa 0%,
+    #3487de 15%,
+    #45eebb 15%,
+    #45eebb 30%,
+    #feff33 30%,
+    #feff33 44%,
+    #ffdd55 44%,
+    #ffdd55 58%,
+    #dd7611 58%,
+    #dd7611 70%,
+    #993411 70%,
+    #993411 100%);
+  background-position: center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: ease padding 1000ms;
+}
+#codel:hover {
+  padding-left: 15px;
+}
+
+
+/* footer end */
