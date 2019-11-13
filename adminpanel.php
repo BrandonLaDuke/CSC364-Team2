@@ -10,6 +10,7 @@
           <li><a href="adminpanel.php">Control Panel Home</a></li>
           <li><a href="adminpanel-edit-games.php">Edit Games</a></li>
           <li><a href="adminpanel-edit-platforms.php">Edit Platforms</a></li>
+          <li><a href="adminpanel-edit-faq.php">Edit FAQ</a></li>
         </ul>
       </div>
 

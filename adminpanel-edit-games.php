@@ -10,6 +10,7 @@
           <li><a href="adminpanel.php">Control Panel Home</a></li>
           <li><a href="adminpanel-edit-games.php">Edit Games</a></li>
           <li><a href="adminpanel-edit-platforms.php">Edit Platforms</a></li>
+          <li><a href="adminpanel-edit-faq.php">Edit FAQ</a></li>
         </ul>
       </div>
 
@@ -23,13 +24,16 @@
           <div class="platforms">
 
             <div>
-              <input type="radio" id="playstation" name="platform" value="PlayStation">
-              <label for="playstation">PlayStation</label>
-            </div>
+              <?php $sql = "SELECT * FROM platforms;";
+              $result = mysqli_query($conn, $sql);
+              $resultCheck = mysqli_num_rows($result);
+              if ($resultCheck > 0) {
+                while ($row = mysqli_fetch_assoc($result)) { ?>
+                  <input type="radio" id="<?php echo $row['idPlatform']; ?>" name="platform" value="<?php echo $row['name']; ?>">
+                  <label for="<?php echo $row['idPlatform']; ?>"><?php echo $row['developer'] . " " . $row['name']; ?></label><br>
+          <?php }?>
 
-            <div>
-              <input type="radio" id="ngc" name="platform" value="GameCube">
-              <label for="ngc">GameCube</label>
+            <?php } ?>
             </div>
           </div>
 
