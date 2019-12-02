@@ -36,7 +36,7 @@
             <?php } ?>
             </div>
           </div>
-
+          <label for="coverart">Upload Cover Art:</label>
           <input type="file" name="coverart" value="">
 
           <p>Select a rating:</p>
