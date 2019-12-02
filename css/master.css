@@ -269,11 +269,11 @@ tr td {
 }
 
 
-.cp-edit > .edit-game > input,
-.cp-edit > .edit-game > .rating > div {
+.edit-game > input,
+.edit-game > .rating > div {
   display: block;
 }
-.cp-edit > .edit-game > label {
+.edit-game > label {
   font-size: 15px;
   margin-top: 15px;
   display: block;
@@ -485,6 +485,53 @@ tr td {
 }
 
 /* Game info page end */
+
+/* Sell Games Begin */
+
+.sellgames-head {
+  font-size: 2em;
+  font-family: 'Retro_Gaming',sans-serif;
+  background-image: linear-gradient(
+    #5444aa 0%,
+    #3487de 15%,
+    #45eebb 15%,
+    #45eebb 30%,
+    #feff33 30%,
+    #feff33 44%,
+    #ffdd55 44%,
+    #ffdd55 58%,
+    #dd7611 58%,
+    #dd7611 70%,
+    #993411 70%,
+    #993411 100%);
+  background-position: center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.edit-game label {
+  font-size: 1.3em;
+}
+.edit-game input {
+  font-size: 1.1em;
+}
+.edit-game textarea {
+  font-size: 1.1em;
+}
+.edit-game button {
+  color: #000;
+  background-color: #000;
+  font-size: 1.3em;
+  padding: 15px 30px;
+  --aug-border-bg: gold;
+  --aug-inset-bg: gold;
+  --aug-width:10px;
+  --aug-border: 5px;
+  --aug-inset: 5px;
+  --aug-tr-height: 0px;
+}
+
+/* Sell Games End */
 
 /* footer begin */
 footer {
