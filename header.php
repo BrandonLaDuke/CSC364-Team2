@@ -17,6 +17,7 @@ session_start(); ?>
   <?php if ($_SESSION['admin']) { ?>
           <a class="cp-btn" augmented-ui="br-clip exe" href="adminpanel.php">Control Panel</a>
   <?php } ?>
+          <a class="cart-btn" augmented-ui="br-clip exe" href="cart.php">My Cart</a>
           <form class="logout" action="includes/logout.inc.php" method="post">
               <button type="submit" augmented-ui="br-clip exe" name="logout-submit">Logout</button>
           </form>
@@ -40,6 +41,7 @@ session_start(); ?>
         <h1 id="logo">Retro Game Store</h1>
         <ul class="menu" augmented-ui="tl-clip br-clip exe">
           <a href="index.php"><li augmented-ui="tl-clip br-clip exe">Home</li></a>
+          <a href="about.php"><li augmented-ui="tl-clip br-clip exe">About Us</li></a>
           <a href="buy.php"><li augmented-ui="tl-clip br-clip exe">Buy</li></a>
           <a href="sell.php"><li augmented-ui="tl-clip br-clip exe">Sell</li></a>
           <a href="faq.php"><li augmented-ui="tl-clip br-clip exe">FAQ</li></a>
