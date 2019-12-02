@@ -65,8 +65,7 @@
       </div>
       <label for="price">Price: </label>
       <input id="price" type="text" name="price" placeholder="e.g. 29.99" value="">
-      <label for="inventory">Inventory: </label>
-      <input id="inventory" type="text" name="inventory" placeholder="e.g. 5" value="">
+      <input style="display:none;" id="inventory" type="text" name="inventory" placeholder="e.g. 5" value="1">
       <label for="details">Description/Information: </label>
       <textarea id="details" name="details" placeholder="Provide details like the description or any other info." rows="8" cols="80"></textarea>
       <br>
