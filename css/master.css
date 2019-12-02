@@ -25,6 +25,7 @@ body {
     background-size: cover;
   color: #fff;
   min-height: 100vh;
+  font-family: sans-serif;
 }
 .wrapper {
   display: grid;
@@ -100,7 +101,7 @@ main {
   outline: none;
   border: none;
 }
-.header-signup, .cp-btn {
+.header-signup, .cp-btn, .cart-btn {
   --aug-border-bg: gold;
   --aug-inset-bg: #000;
   --aug-width:10px;
@@ -152,7 +153,7 @@ main {
   color: #000;
   transition: ease all 500ms
 }
-@media (max-width:799px) {
+@media (max-width:1140px) {
   .wrapper {
     margin-top: 60px;
   }
@@ -160,10 +161,33 @@ main {
     display: inline-block;
   }
 }
+@media (max-width:636px) {
+  .wrapper {
+    margin-top: 110px;
+  }
+  .header-login {
+    height: 120px;
+  }
+  .welcome-msg {
+    display: inline-block;
+  }
+}
+@media (max-width:544px) {
+  .wrapper {
+    margin-top: 135px;
+  }
+  .header-login {
+    height: 130px;
+  }
+  .welcome-msg {
+    display: inline-block;
+  }
+}
+
 @media (min-width:800px) {
   .menu {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
   .wrapper {
     display: grid;
@@ -262,6 +286,205 @@ tr td {
   width: 500px;
 }
 /* admins end */
+
+/* buy page begin */
+
+.allGames {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  max-width: 1500px;
+  margin: auto;
+}
+.game {
+  display: block;
+  text-decoration: none;
+  --aug-border-bg: gold;
+  --aug-width:10px;
+  --aug-border: 5px;
+  --aug-inset: 5px;
+  --aug-tr-height: 0px;
+  padding: 20px;
+  color: #fff;
+}
+.game > .coverart {
+  width: 100%; height: auto;
+}
+.game > .gamename {
+  text-decoration: none;
+  font-family: 'Retro_Gaming';
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+.game > .platform {
+  font-family: sans-serif;
+  text-decoration: none;
+  margin: 0 0 20px 0;
+}
+.game > .price {
+  color: #f00;
+  font-family: sans-serif;
+  text-decoration: none;
+  font-size: 1.5em;
+  margin: 0;
+  font-weight: bold;
+}
+.game:hover {
+  --aug-inset-bg: gold;
+  color: #000;
+}
+.game:hover > .price {
+  color: #000;
+}
+@media (min-width:600px) {
+  .allGames {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width:700px) {
+  .allGames {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width:850px) {
+  .allGames {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width:1024px) {
+  .allGames {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* buy page end */
+
+/* Game info page begin */
+
+.gamepage {
+  color: #fff;
+  max-width: 800px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "title"
+                       "coverart"
+                       "cartinfo"
+                       "details";
+}
+.gamepage > .title {
+  grid-area: title;
+}
+.gamepage > .title > h1 {
+  font-family: 'Retro_Gaming', sans-serif;
+  margin: 1em 0 .5em 0;
+}
+.gamepage > .title > .pub {
+  display: block;
+  font-size: 1.1em;
+}
+.gamepage > .title > .rating {
+  display: block;
+  margin: 10px 0;
+}
+.gamepage > .coverart {
+  grid-area: coverart;
+}
+.gamepage > .coverart > img {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  display: block;
+}
+.gamepage > .cartinfo {
+  grid-area: cartinfo;
+}
+.gamepage > .cartinfo > .platform {
+  display: block;
+  font-size: 1.3em;
+  font-family: sans-serif;
+  margin: 0;
+}
+.gamepage > .cartinfo > .price {
+  display: block;
+  font-size: 1.5em;
+  font-family: sans-serif;
+  margin: .5em 0;
+}
+.gamepage > .cartinfo > form > .addtocart {
+  color: #000;
+  background-color: #000;
+  font-size: 1.3em;
+  width: 100%;
+  padding: 15px;
+  --aug-border-bg: gold;
+  --aug-inset-bg: gold;
+  --aug-width:10px;
+  --aug-border: 5px;
+  --aug-inset: 5px;
+  --aug-tr-height: 0px;
+}
+.gamepage > .cartinfo > .stock {
+  font-size: 1.2em;
+}
+.gamepage > .details {
+  grid-area: details;
+}
+.gamepage > .details > h2 {
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Retro_Gaming',sans-serif;
+  background-image: linear-gradient(
+    #5444aa 0%,
+    #3487de 15%,
+    #45eebb 15%,
+    #45eebb 30%,
+    #feff33 30%,
+    #feff33 44%,
+    #ffdd55 44%,
+    #ffdd55 58%,
+    #dd7611 58%,
+    #dd7611 70%,
+    #993411 70%,
+    #993411 100%);
+  background-position: center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gamepage > .details > p {
+  margin: auto;
+  max-width: 1000px;
+}
+@media (min-width:768px) {
+  .gamepage {
+    color: #fff;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 35px;
+    grid-template-areas: "coverart title"
+                         "coverart cartinfo"
+                         "details details";
+  }
+  .gamepage > .cartinfo > form > .addtocart {
+    width: auto;
+    padding: 20px;
+  }
+  .gamepage > .details > h2 {
+    font-size: 4em;
+  }
+  .gamepage > .details > p {
+    font-size: 1.3em;
+  }
+}
+@media (min-width:1000px) {
+  .gamepage {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* Game info page end */
 
 /* footer begin */
 footer {
