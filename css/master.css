@@ -533,6 +533,111 @@ tr td {
 
 /* Sell Games End */
 
+/* About Us Begin */
+
+.about-card {
+  margin: auto;
+  max-width: 900px;
+  --aug-border-bg: gold;
+  --aug-inset-bg: linear-gradient(
+    #5444aa33 0%,
+    #3487de33 15%,
+    #45eebb33 15%,
+    #45eebb33 30%,
+    #feff3333 30%,
+    #feff3333 44%,
+    #ffdd5533 44%,
+    #ffdd5533 58%,
+    #dd761133 58%,
+    #dd761133 70%,
+    #99341133 70%,
+    #99341133 100%);;
+  --aug-width:10px;
+  --aug-border: 5px;
+  --aug-inset: 5px;
+  padding: 20px;
+
+}
+.about-card h1 {
+  background-image: linear-gradient(
+    #5444aa 0%,
+    #3487de 15%,
+    #45eebb 15%,
+    #45eebb 30%,
+    #feff33 30%,
+    #feff33 44%,
+    #ffdd55 44%,
+    #ffdd55 58%,
+    #dd7611 58%,
+    #dd7611 70%,
+    #993411 70%,
+    #993411 100%);
+  background-position: center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5em;
+  font-family: 'Retro_Gaming', sans-serif;
+}
+.about-card p {
+  line-height: 1.5;
+  letter-spacing: 1.4px;
+  font-size: 1.3em;
+}
+.about-card a {
+  color: gold;
+  text-decoration: none;
+}
+.about-card a:hover {
+  background-image: linear-gradient(
+    #5444aa 0%,
+    #3487de 15%,
+    #45eebb 15%,
+    #45eebb 30%,
+    #feff33 30%,
+    #feff33 44%,
+    #ffdd55 44%,
+    #ffdd55 58%,
+    #dd7611 58%,
+    #dd7611 70%,
+    #993411 70%,
+    #993411 100%);
+  background-position: center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (min-width:975px) {
+  .about-card {
+    --aug-tr-width: 700px;
+    --aug-tr-height: 100px;
+    padding: 40px;
+  }
+}
+
+/* About Us End */
+
+/* FAQ Begin */
+
+.faq-list {
+  margin: auto;
+  max-width: 900px;
+}
+.faq-list > .faq {
+  margin-top: 30px;
+}
+.faq-list > .faq > .q {
+  font-weight: bold;
+  color: gold;
+  text-decoration: underline;
+}
+.faq-list > .faq > .a {
+
+}
+
+/* FAQ End */
+
+
 /* footer begin */
 footer {
   padding: 15px 25px;
