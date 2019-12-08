@@ -10,7 +10,7 @@
           <th>Action</th>
         </tr>
         <?php
-        echo $_SESSION["cart"];
+        var_dump($_SESSION["cart"]);
         if(!empty($_SESSION["cart"])) {
           $total = 0;
           foreach($_SESSION["cart"] as $keys => $values) {
