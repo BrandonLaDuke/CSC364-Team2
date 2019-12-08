@@ -15,6 +15,16 @@
       </div>
 
       <div class="cp-edit">
+        <h1 class="head-txt">Add Game</h1>
+        <?php if (isset($_GET['error'])) {
+          if ($_GET['error'] == "emptyfields") {
+            echo '<p class="error" augmented-ui="tl-clip br-clip exe">Oops, that didn\'t work... Fill in all fields please.</p>';
+          } elseif ($_GET['error'] == "sqlerror") {
+            echo '<p class="error" augmented-ui="tl-clip br-clip exe">An error has occured within our database. Please contact us and let us know any details that might have caused this error.</p>';
+          }
+        } elseif ($_GET['savegame'] == "success") {
+          echo '<p class="db-success" augmented-ui="tl-clip br-clip exe">Yay! Your game has been added to the store.</p>';
+        }?>
         <form class="edit-game" action="includes/savegame.inc.php" method="post" enctype="multipart/form-data">
           <label for="gametitle">Game Title</label>
           <input id="gametitle" type="text" name="gametitle" placeholder="e.g. Pokemon: Red Version" value="">
@@ -83,7 +93,7 @@
           <label for="details">Description/Information: </label>
           <textarea id="details" name="details" placeholder="Provide details like the description or any other info." rows="8" cols="80"></textarea>
           <br>
-          <button type="submit" name="save-game-submit">Save</button>
+          <button type="submit" name="save-game-submit" augmented-ui="tl-clip br-clip exe">Save</button>
         </form>
       </div>
     </section>
