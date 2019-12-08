@@ -637,6 +637,36 @@ tr td {
 
 /* FAQ End */
 
+/* Notify messages begin*/
+
+.db-success {
+  display: inline-block;
+  --aug-border: 2px;
+  --aug-inset: 5px;
+  padding: 20px; /* mind the gap */
+  text-align: center;
+  font-size: 16px;
+  font-family: Retro_Gaming;
+  --aug-border-bg: #00ff43;
+  --aug-inset-bg: #00ff43;
+  --aug-width:10px;
+  color: #000;
+}
+.error {
+  display: inline-block;
+  --aug-border: 2px;
+  --aug-inset: 5px;
+  padding: 20px; /* mind the gap */
+  text-align: center;
+  font-size: 16px;
+  font-family: Retro_Gaming;
+  --aug-border-bg: #B30F0F;
+  --aug-inset-bg: #B30F0F;
+  --aug-width:10px;
+  color: #fff;
+}
+
+/* Notify messages end */
 
 /* footer begin */
 footer {

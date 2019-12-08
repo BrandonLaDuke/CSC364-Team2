@@ -15,6 +15,20 @@
       </div>
 
       <div class="cp-ga-info">
+        <?php if (isset($_GET['error'])) {
+          if ($_GET['error'] == "emptyfields") {
+            echo '<p class="error" augmented-ui="tl-clip br-clip exe">Oops, that didn\'t work... Fill in all fields please.</p>';
+          } elseif ($_GET['error'] == "sqlerror") {
+            echo '<p class="error" augmented-ui="tl-clip br-clip exe">An error has occured within our database. Please contact us and let us know any details that might have caused this error.</p>';
+          }
+        } elseif (isset($_GET['add_faq'])) {
+          if ($_GET['add_faq'] == "success") {
+            echo '<p class="db-success" augmented-ui="tl-clip br-clip exe">Your Frenquently Asked Question has been added.</p>';
+          }
+        }
+
+
+         ?>
         <?php $sql = "SELECT * FROM games;";
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result); ?>
