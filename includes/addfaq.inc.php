@@ -10,7 +10,7 @@ if (isset($_POST['add-faq'])) {
   $question = $_POST['q'];
   $answer = $_POST['a'];
   if (empty($question) || empty($answer)) {
-    header("Location: ../adminpanel-edit-faq.php?error=emptyfields");
+    header("Location: ../adminpanel-edit-faq.php?error=emptyfields&q=".$question."&a=".$answer);
     exit();
   } else {
     $sql = "INSERT INTO faq (question, answer) VALUES (?, ?)";

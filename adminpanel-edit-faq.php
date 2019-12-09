@@ -20,6 +20,8 @@
         <?php if (isset($_GET['error'])) {
           if ($_GET['error'] == "emptyfields") {
             echo '<p class="error" augmented-ui="tl-clip br-clip exe">Oops, that didn\'t work... Fill in all fields please.</p>';
+            $q = $_GET['q'];
+            $a = $_GET['a'];
           } elseif ($_GET['error'] == "sqlerror") {
             echo '<p class="error" augmented-ui="tl-clip br-clip exe">An error has occured within our database. Please contact us and let us know any details that might have caused this error.</p>';
           }
@@ -27,13 +29,13 @@
         <form class="add-faq" action="includes/addfaq.inc.php" method="post" enctype="multipart/form-data">
           <label for="q">Question:</label>
           <br>
-          <input id="q" type="text" name="q" placeholder="e.g. Why are there sunflower seeds in my account?" value="">
+          <input id="q" type="text" name="q" placeholder="e.g. Why are there sunflower seeds in my account?" value="<?php echo $q; ?>">
           <br><br>
           <label for="a">Answer:</label>
           <br>
-          <textarea id="a" type="text" name="a" placeholder="Because you have a hamster silly, remember?" value=""></textarea>
+          <textarea id="a" type="text" name="a" placeholder="Because you have a hamster silly, remember?" value=""><?php echo $a; ?></textarea>
           <br><br>
-          <button type="submit" name="add-faq">Save</button>
+          <button type="submit" name="add-faq" augmented-ui="tl-clip br-clip exe">Save</button>
         </form>
       </div>
     </section>
