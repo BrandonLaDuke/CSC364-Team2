@@ -11,6 +11,7 @@
           <li><a href="adminpanel-edit-games.php">Edit Games</a></li>
           <li><a href="adminpanel-edit-platforms.php">Edit Platforms</a></li>
           <li><a href="adminpanel-edit-faq.php">Edit FAQ</a></li>
+          <li><a href="adminpanel-documents.php">Project Documents</a></li>
         </ul>
       </div>
 
@@ -25,6 +26,14 @@
           if ($_GET['add_faq'] == "success") {
             echo '<p class="db-success" augmented-ui="tl-clip br-clip exe">Your Frenquently Asked Question has been added.</p>';
           }
+        } elseif (isset($_GET['add_platform'])) {
+          if ($_GET['add_platform'] == "success") {
+            echo '<p class="db-success" augmented-ui="tl-clip br-clip exe">Your new platform has been added to the database.</p>';
+          }
+        } elseif (isset($_GET['add_game'])) {
+          if ($_GET['add_game'] == "success") {
+            echo '<p class="db-success" augmented-ui="tl-clip br-clip exe">Your game was successfully to the database.</p>';
+          }
         }
 
 
@@ -32,7 +41,7 @@
         <?php $sql = "SELECT * FROM games;";
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result); ?>
-        <h1>Games</h1>
+        <h1 class="head-txt">Games</h1>
         <table>
           <?php
           if ($resultCheck > 0) { ?>
@@ -67,7 +76,7 @@
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
         ?>
-        <h1>Users</h1>
+        <h1 class="head-txt">Users</h1>
         <table>
           <?php
           if ($resultCheck > 0) { ?>

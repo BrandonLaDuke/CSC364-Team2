@@ -11,6 +11,7 @@
           <li><a href="adminpanel-edit-games.php">Edit Games</a></li>
           <li><a href="adminpanel-edit-platforms.php">Edit Platforms</a></li>
           <li><a href="adminpanel-edit-faq.php">Edit FAQ</a></li>
+          <li><a href="adminpanel-documents.php">Project Documents</a></li>
         </ul>
       </div>
 
