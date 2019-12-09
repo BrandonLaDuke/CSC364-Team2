@@ -29,7 +29,7 @@ if (isset($_POST['sell-game-submit'])) {
 
   $allowed = array('jpg', 'jpeg', 'png');
   if (empty($gametitle) || empty($publisher) || empty($platform) || empty($rating) || empty($price) || empty($inventory) || empty($details)) {
-    header("Location: ../sell.php?error=emptyfields");
+    header("Location: ../sell.php?error=emptyfields&gametitle=".$gametitle."&publisher=".$publisher."&price=".$price."&details=".$details);
     exit();
   } else {
     $sql = "INSERT INTO games (gameTitle, publisher, platform, rating, price, inventory, details, coverArtURL) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";

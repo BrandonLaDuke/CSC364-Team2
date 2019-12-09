@@ -26,6 +26,7 @@ body {
   color: #fff;
   min-height: 100vh;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 .wrapper {
   display: grid;
@@ -355,7 +356,7 @@ tr td {
 }
 .hero-txt {
   position: absolute;
-  top: 30px; right: 35px;
+  top: 30px; right: 15px;
 }
 #at-txt {
   text-align: center;
@@ -468,6 +469,7 @@ tr td {
     top: 90px; right: 290px;
   }
 }
+
 
 
 
