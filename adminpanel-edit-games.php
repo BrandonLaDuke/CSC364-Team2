@@ -11,6 +11,7 @@
           <li><a href="adminpanel-edit-games.php">Edit Games</a></li>
           <li><a href="adminpanel-edit-platforms.php">Edit Platforms</a></li>
           <li><a href="adminpanel-edit-faq.php">Edit FAQ</a></li>
+          <li><a href="adminpanel-documents.php">Project Documents</a></li>
         </ul>
       </div>
 
@@ -92,7 +93,7 @@
           <input id="inventory" type="text" name="inventory" placeholder="e.g. 5" value="">
           <label for="details">Description/Information: </label>
           <textarea id="details" name="details" placeholder="Provide details like the description or any other info." rows="8" cols="80"></textarea>
-          <br>
+          <br><br>
           <button type="submit" name="save-game-submit" augmented-ui="tl-clip br-clip exe">Save</button>
         </form>
       </div>

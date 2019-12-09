@@ -6,11 +6,19 @@ session_start(); ?>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Retro Gaming Website</title>
+    <title>Retro Game Store</title>
+
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/augmented-ui/augmented.css">
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
+    <?php if (isset($_GET['error'])) {
+      if ($_GET['error'] == "wrongpwd") {
+        echo '<script>alert("Password is incorrect.");</script>';
+      } elseif ($_GET['error'] == "nouser") {
+        echo '<script>alert("There is no user with that username or email. Signup to create an account.");</script>';
+      }
+    } ?>
     <div class="header-login" augmented-ui="br-clip exe">
       <?php if (isset($_SESSION['userId'])) { ?>
         <p class="welcome-msg">Welcome, <?php echo $_SESSION['userUid']; ?>! &nbsp; Wallet Ballance: $<?php echo $_SESSION['wallet']; ?></p>
