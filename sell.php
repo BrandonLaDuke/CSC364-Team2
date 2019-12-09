@@ -1,6 +1,15 @@
 <?php require "header.php"; ?>
 <main>
-  <h1 class="sellgames-head">Sell Games</h1>
+  <h1 class="head-txt">Sell Games</h1>
+  <?php if (isset($_GET['error'])) {
+    if ($_GET['error'] == "emptyfields") {
+      echo '<p class="error" augmented-ui="tl-clip br-clip exe">Oops, that didn\'t work... Fill in all fields please.</p>';
+    } elseif ($_GET['error'] == "sqlerror") {
+      echo '<p class="error" augmented-ui="tl-clip br-clip exe">An error has occured within our database. Please contact us and let us know any details that might have caused this error.</p>';
+    }
+  } elseif ($_GET['savegame'] == "success") {
+    echo '<p class="db-success" augmented-ui="tl-clip br-clip exe">Yay! Your game has been added to the store.</p>';
+  }?>
   <?php if (isset($_SESSION['userId'])) { ?>
     <form class="edit-game" action="includes/sellgame.inc.php" method="post" enctype="multipart/form-data">
       <label for="gametitle">Game Title</label>
