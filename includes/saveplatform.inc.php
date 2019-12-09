@@ -12,7 +12,7 @@ if (isset($_POST['save-game-submit'])) {
   $type = $_POST['platformType'];
 
   if (empty($developer) || empty($name) || empty($type)) {
-    header("Location: ../adminpanel-edit-platforms.php?error=emptyfields");
+    header("Location: ../adminpanel-edit-platforms.php?error=emptyfields&developer=".$developer."&platform=".$name."&type=".$type);
     exit();
   } else {
     $sql = "INSERT INTO platforms (developer, name, type) VALUES (?, ?, ?)";
