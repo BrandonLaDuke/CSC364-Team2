@@ -12,5 +12,6 @@
       <h2>We're dedicated to giving you the very best of gaming!</h2>
     </div>
   </div>
+  
 </main>
 <?php require "footer.php"; ?>

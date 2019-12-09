@@ -20,19 +20,22 @@
         <?php if (isset($_GET['error'])) {
           if ($_GET['error'] == "emptyfields") {
             echo '<p class="error" augmented-ui="tl-clip br-clip exe">Oops, that didn\'t work... Fill in all fields please.</p>';
+            $platform = $_GET['platform'];
+            $developer = $_GET['developer'];
+            $type = $_GET['type'];
           } elseif ($_GET['error'] == "sqlerror") {
             echo '<p class="error" augmented-ui="tl-clip br-clip exe">An error has occured within our database. Please contact us and let us know any details that might have caused this error.</p>';
           }
         }?>
         <form class="edit-platform" action="includes/saveplatform.inc.php" method="post" enctype="multipart/form-data">
           <label for="name">Platform Name</label>
-          <input id="name" type="text" name="platformName" placeholder="Genesis" value="">
+          <input id="name" type="text" name="platformName" placeholder="Genesis" value="<?php echo $platform; ?>">
           <br><br>
           <label for="developer">Developer</label>
-          <input id="developer" type="text" name="developer" placeholder="SEGA" value="">
+          <input id="developer" type="text" name="developer" placeholder="SEGA" value="<?php echo $developer; ?>">
           <br><br>
           <label for="type">Type:</label>
-          <input id="type" type="text" name="platformType" placeholder="Home video game console" value="">
+          <input id="type" type="text" name="platformType" placeholder="Home video game console" value="<?php echo $type; ?>">
           <br><br>
           <button type="submit" name="save-game-submit" augmented-ui="tl-clip br-clip exe">Save</button>
         </form>
