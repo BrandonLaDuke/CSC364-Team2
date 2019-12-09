@@ -25,6 +25,5 @@ if (isset($_POST['add-faq'])) {
       }
     }
   }
-
 mysqli_stmt_close($stmt);
 mysqli_close($conn);
