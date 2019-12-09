@@ -5,10 +5,17 @@
     <p>Here are some answers to our coustomers frequently asked questions.</p>
   </div>
   <div class="faq-list">
-    <div class="faq">
-      <h2 class="q">Why are there sunflower seeds in my account?</h2>
-      <p class="a">Because you have a hamster remember?</p>
-    </div>
+    <?php $sql = "SELECT * FROM faq;";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    if ($resultCheck > 0) {
+      while ($row = mysqli_fetch_assoc($result)) { ?>
+        <div class="faq">
+          <h2 class="q"><?php echo $row['question']; ?></h2>
+          <p class="a"><?php echo $row['answer']; ?></p>
+        </div>
+<?php }
+    } ?>
   </div>
 </main>
 <?php require "footer.php"; ?>

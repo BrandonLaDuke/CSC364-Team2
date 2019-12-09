@@ -33,7 +33,7 @@
           <br>
           <textarea id="a" type="text" name="a" placeholder="Because you have a hamster silly, remember?" value=""></textarea>
           <br><br>
-          <button type="submit" name="add-faq">Save</button>
+          <button type="submit" name="add-faq" augmented-ui="tl-clip br-clip exe">Save</button>
         </form>
       </div>
     </section>

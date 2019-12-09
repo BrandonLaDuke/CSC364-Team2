@@ -343,6 +343,10 @@ tr td {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.add-faq input,
+.add-faq textarea {
+  width: 450px;
+}
 /* admins end */
 
 /* Home page begin */
@@ -716,7 +720,8 @@ form textarea {
   font-size: 1.1em;
 }
 .edit-game button,
-.edit-platform button {
+.edit-platform button,
+.add-faq button {
   color: #000;
   background-color: #000;
   font-size: 1.3em;
@@ -728,6 +733,7 @@ form textarea {
   --aug-inset: 5px;
   --aug-tr-height: 0px;
 }
+
 
 /* Sell Games End */
 
