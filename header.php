@@ -8,7 +8,7 @@ session_start(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Retro Game Store</title>
 
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/augmented-ui/augmented.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/augmented-ui@1/augmented.css">
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
